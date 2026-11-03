@@ -184,13 +184,9 @@ main blockquote p{margin:8px 0}
 .closer button:hover{border-color:var(--accent)}
 @media (max-width:900px){.layout{grid-template-columns:1fr}nav{position:static;max-height:none}}
 :root{color-scheme:dark}</style></head>
-<body><header><h1>CALL4のタグ分類を考える</h1><p>現状のタグの問題点、類似サイトの分類例、新しい分類の要件と試行結果　｜　2026-11-02　｜　公開ケース97件を対象</p></header>
+<body><header><h1>CALL4のタグ分類を考える</h1><p>現状のタグの問題点、類似サイトの分類例、新しい分類の要件と試行結果　｜　2026-11-03　｜　公開ケース97件を対象</p></header>
 <div class="layout"><nav><a href="#c0">0. このプロジェクトの意図と目標</a><a href="#c1">1. 現状のタグの問題点</a><a class="sub" href="#c1-0">1.1 軸（分類基準）が混ざっている</a><a class="sub" href="#c1-1">1.2 タグの偏り</a><a href="#c2">2. 類似ケースのサーベイ結果</a><a class="sub" href="#c2-0">2.1 分類方法の種類</a><a class="sub" href="#c2-1">2.2 先行分類の比較表</a><a class="sub" href="#c2-2">2.3 代表的な例</a><a class="sub2" href="#c2-3">LEDGE（8タグ）</a><a class="sub2" href="#c2-4">Dialogue for People</a><a class="sub2" href="#c2-5">ACLU</a><a class="sub2" href="#c2-6">Human Rights Watch</a><a class="sub" href="#c2-7">2.4 わかったこと</a><a href="#c3">3. 新しいタグ分類に必要な要件と、分類ルール</a><a class="sub" href="#c3-0">3.1 要件</a><a class="sub" href="#c3-1">3.2 LLM（Claude）に与えた付与ルール</a><a class="sub" href="#c3-2">3.3 方向性</a><a class="sub" href="#c3-3">3.4 分類を評価するための数値</a><a href="#c4">4. 試行した分類の結果</a><a class="sub" href="#c4-0">4.1 試行した分類の一覧</a><a class="sub" href="#c4-1">4.2 代表的な分類結果</a><a class="sub2" href="#c4-2">A6の結果</a><a class="sub2" href="#c4-3">A5の結果</a><a class="sub2" href="#c4-4">B1の結果</a><a class="sub2" href="#c4-5">A6・A5・B1の比較</a><a class="sub2" href="#c4-6">C1の結果</a><a href="#c5">5. まとめ</a></nav><main><section id="c0"><h2>0. このプロジェクトの意図と目標</h2><p><strong>意図</strong>　CALL4には、公共訴訟のケースが約100件ある。法律に詳しくない人が、CALL4がどのような社会課題に取り組んでいるのかを、<strong>一目で把握できるようにしたい。</strong></p>
-<p><strong>目標</strong>　ケースを、<strong>社会課題の切り口で分類し直す。</strong>次の2つができる分類を目指す。</p>
-<ul>
-<li>個別のケースから社会課題へ、社会課題から個別のケースへ、両方向にたどれる。</li>
-<li>課題別のページや、どの課題を応援したいかを選ぶ画面などに使える。</li>
-</ul>
+<p><strong>目標</strong>　ケースを、<strong>社会課題の切り口で分類し直す</strong>ことで、call4のケース全体が意味する社会課題の全貌（森）と、各個別ケースの内容（木）とを、同時に把握できる分類を模索する。ひいては、課題別のページや、どの課題を応援したいかを選ぶ画面などに使える。</p>
 <p>そのために、現行のタグの問題点を整理し、似たサイトの分類を調べ、複数の分類案を実際のケースに当てはめて比べた。この資料は、その結果をまとめたものである。</p>
 <p><strong>注意</strong>　ここに載せる分類は、すべてLLM（Claude）に付けさせた結果である。人が1件ずつ細部を確認したわけではない。この試行の目的は、LLM（Claude）による大まかな分類をたくさん試すことで、<strong>分類の仕方そのものを俯瞰して比べ、どのような分類手法がよいかを提案すること</strong>である。個々のケースの分類結果の正しさを保証するものではない。</p>
 <hr /></section><section id="c1"><h2>1. 現状のタグの問題点</h2><p><span id="c1-0"></span></p>
